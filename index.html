@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.P. Dough - Late Night Calzones & More | Join Our Community</title>
+    <meta name="description" content="Join the D.P. Dough community for exclusive deals, franchise opportunities, and late-night calzone cravings. Sign up now!">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B35',
+                        secondary: '#FFD23F'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(255, 210, 63, 0.8) 100%),
+                        url('https://readdy.ai/api/search-image?query=delicious%20golden%20calzones%20and%20pizza%20slices%20on%20rustic%20wooden%20table%20with%20warm%20ambient%20lighting%2C%20cozy%20restaurant%20atmosphere%2C%20steam%20rising%20from%20hot%20food%2C%20appetizing%20cheese%20melting%2C%20professional%20food%20photography%2C%20warm%20orange%20and%20yellow%20tones%2C%20inviting%20late%20night%20dining%20scene&width=1920&height=1080&seq=hero001&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .form-glow {
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            from {
+                box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(255, 107, 53, 0.8);
+            }
+        }
+        
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="font-['Pacifico'] text-2xl text-primary">D.P. Dough</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#menu" class="text-gray-700 hover:text-primary transition-colors">Menu</a>
+                    <a href="#locations" class="text-gray-700 hover:text-primary transition-colors">Locations</a>
+                    <a href="#franchise" class="text-gray-700 hover:text-primary transition-colors">Franchise</a>
+                    <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+                        Order Now
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 w-6 h-6 flex items-center justify-center">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Late Night Cravings<br>
+                    <span class="text-secondary">Solved Since 1987</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                    Join thousands of college students and late-night food lovers who get exclusive deals, 
+                    new menu alerts, and franchise opportunities delivered straight to their inbox.
+                </p>
+                
+                <!-- Main Signup Form -->
+                <div class="bg-white/95 backdrop-blur-sm p-8 rounded-2xl max-w-md mx-auto form-glow pulse-glow">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Get Exclusive Access</h3>
+                    <p class="text-gray-600 mb-6">Join our community for deals, updates & franchise info</p>
+                    
+                    <form id="hero-signup" class="space-y-4">
+                        <div>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                placeholder="Enter your email address"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+                            >
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <input 
+                                type="text" 
+                                name="first_name" 
+                                placeholder="First name"
+                                class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+                            >
+                            <input 
+                                type="text" 
+                                name="zip_code" 
+                                placeholder="Zip code"
+                                class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+                            >
+                        </div>
+                        <button 
+                            type="submit" 
+                            class="w-full bg-primary text-white py-3 px-6 !rounded-button font-semibold hover:bg-orange-600 transition-colors whitespace-nowrap"
+                        >
+                            Get My Exclusive Access
+                        </button>
+                        <p class="text-xs text-gray-500 text-center">
+                            We respect your privacy. Unsubscribe anytime. 
+                            <a href="#privacy" class="underline">Privacy Policy</a>
+                        </p>
+                    </form>
+                </div>
+                
+                <div class="mt-12 scroll-indicator">
+                    <div class="w-6 h-6 flex items-center justify-center mx-auto text-white/70">
+                        <i class="ri-arrow-down-line text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Why Join the D.P. Dough Community?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Over 35 years of serving late-night comfort food to college communities across America
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-percent-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Exclusive Deals</h3>
+                    <p class="text-gray-600">Get member-only discounts, flash sales, and special promotions before anyone else</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-xl">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-restaurant-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">New Menu Alerts</h3>
+                    <p class="text-gray-600">Be the first to try new calzones, wings, and late-night favorites as we expand our menu</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-building-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Franchise Opportunities</h3>
+                    <p class="text-gray-600">Interested in owning a D.P. Dough? Get insider info on new franchise locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Loved by Students Everywhere</h2>
+                <p class="text-xl text-gray-600">Join thousands who fuel their late-night study sessions with D.P. Dough</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=happy%20college%20student%20eating%20calzone%20in%20dorm%20room%2C%20casual%20clothing%2C%20satisfied%20expression%2C%20warm%20lighting%2C%20authentic%20college%20lifestyle%20photography&width=60&height=60&seq=student001&orientation=squarish" 
+                             alt="Student" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah Chen</h4>
+                            <p class="text-sm text-gray-600">University of Maryland</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"D.P. Dough saved my finals week! Their calzones are perfect for those 2 AM study sessions. The buffalo chicken is my go-to."</p>
+                    <div class="flex mt-3">
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=college%20student%20enjoying%20late%20night%20food%20delivery%2C%20pizza%20box%20open%2C%20happy%20expression%2C%20dorm%20room%20setting%2C%20casual%20atmosphere&width=60&height=60&seq=student002&orientation=squarish" 
+                             alt="Student" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Marcus Johnson</h4>
+                            <p class="text-sm text-gray-600">Penn State University</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Been ordering from D.P. Dough since freshman year. Now I'm a senior and still obsessed with their pepperoni rolls!"</p>
+                    <div class="flex mt-3">
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://readdy.ai/api/search-image?query=young%20professional%20eating%20takeout%20food%2C%20satisfied%20customer%2C%20modern%20apartment%20setting%2C%20evening%20lighting%2C%20casual%20dining%20experience&width=60&height=60&seq=student003&orientation=squarish" 
+                             alt="Student" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Emma Rodriguez</h4>
+                            <p class="text-sm text-gray-600">Ohio State University</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The member deals are amazing! I saved over $50 last semester just by being on their email list. Plus, the food is incredible."</p>
+                    <div class="flex mt-3">
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                        <i class="ri-star-fill text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Late Night Favorites</h2>
+                <p class="text-xl text-gray-600">Handcrafted calzones, wings, and more delivered hot to your door</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-square">
+                        <img src="https://readdy.ai/api/search-image?query=golden%20brown%20calzone%20cut%20in%20half%20showing%20melted%20cheese%20and%20pepperoni%20filling%2C%20professional%20food%20photography%2C%20appetizing%20presentation%20on%20white%20plate%2C%20steam%20rising%2C%20restaurant%20quality%20lighting&width=300&height=300&seq=food001&orientation=squarish" 
+                             alt="Buffalo Chicken Calzone" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Buffalo Chicken Calzone</h3>
+                    <p class="text-gray-600 text-sm">Spicy buffalo chicken, mozzarella, and blue cheese</p>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-square">
+                        <img src="https://readdy.ai/api/search-image?query=crispy%20chicken%20wings%20with%20buffalo%20sauce%2C%20celery%20sticks%20and%20blue%20cheese%20dip%2C%20professional%20food%20photography%2C%20appetizing%20presentation%2C%20restaurant%20quality%20lighting%2C%20orange%20and%20golden%20tones&width=300&height=300&seq=food002&orientation=squarish" 
+                             alt="Buffalo Wings" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Buffalo Wings</h3>
+                    <p class="text-gray-600 text-sm">Crispy wings tossed in our signature buffalo sauce</p>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-square">
+                        <img src="https://readdy.ai/api/search-image?query=golden%20pepperoni%20rolls%20sliced%20showing%20melted%20cheese%20and%20pepperoni%20inside%2C%20professional%20food%20photography%2C%20appetizing%20presentation%20on%20wooden%20board%2C%20warm%20lighting&width=300&height=300&seq=food003&orientation=squarish" 
+                             alt="Pepperoni Rolls" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Pepperoni Rolls</h3>
+                    <p class="text-gray-600 text-sm">Fresh dough wrapped around pepperoni and cheese</p>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-square">
+                        <img src="https://readdy.ai/api/search-image?query=loaded%20cheese%20fries%20with%20bacon%20bits%20and%20green%20onions%2C%20melted%20cheese%20sauce%2C%20professional%20food%20photography%2C%20appetizing%20presentation%2C%20comfort%20food%20styling&width=300&height=300&seq=food004&orientation=squarish" 
+                             alt="Loaded Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Loaded Fries</h3>
+                    <p class="text-gray-600 text-sm">Crispy fries topped with cheese, bacon, and scallions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Join the D.P. Dough Family?
+            </h2>
+            <p class="text-xl text-white/90 mb-8">
+                Get exclusive deals, menu updates, and franchise opportunities delivered to your inbox
+            </p>
+            
+            <!-- Secondary Signup Form -->
+            <div class="bg-white p-8 rounded-2xl max-w-md mx-auto">
+                <form id="cta-signup" class="space-y-4">
+                    <div>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            required
+                            placeholder="Enter your email address"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+                        >
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <input 
+                            type="text" 
+                            name="first_name" 
+                            placeholder="First name"
+                            class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+                        >
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            placeholder="Phone (optional)"
+                            class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+                        >
+                    </div>
+                    <button 
+                        type="submit" 
+                        class="w-full bg-gray-900 text-white py-3 px-6 !rounded-button font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
+                    >
+                        Join Now - It's Free!
+                    </button>
+                </form>
+            </div>
+            
+            <p class="text-white/70 text-sm mt-6">
+                Join over 15,000 students and food lovers already in our community
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <span class="font-['Pacifico'] text-2xl text-primary">D.P. Dough</span>
+                    <p class="mt-4 text-gray-400">Serving late-night comfort food to college communities since 1987.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-facebook-fill text-xl"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-instagram-line text-xl"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-twitter-x-line text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Menu</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Calzones</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Wings</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Rolls</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sides</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Locations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Franchise</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Nutrition Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 D.P. Dough. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-2xl max-w-md mx-4 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="ri-check-line text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Welcome to D.P. Dough!</h3>
+            <p class="text-gray-600 mb-6">You're all set! Check your email for exclusive deals coming your way.</p>
+            <button onclick="closeModal()" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-orange-600 transition-colors whitespace-nowrap">
+                Awesome!
+            </button>
+        </div>
+    </div>
+
+    <script id="form-handler">
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('form');
+            
+            forms.forEach(form => {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Track form submission
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submit', {
+                            form_id: form.id,
+                            email: data.email
+                        });
+                    }
+                    
+                    // Simulate API call (replace with actual Mailchimp integration)
+                    try {
+                        // Here you would integrate with Mailchimp API
+                        console.log('Form submitted:', data);
+                        
+                        // Show success modal
+                        document.getElementById('success-modal').classList.remove('hidden');
+                        
+                        // Reset form
+                        form.reset();
+                        
+                    } catch (error) {
+                        console.error('Submission error:', error);
+                        alert('Something went wrong. Please try again.');
+                    }
+                });
+            });
+        });
+        
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+    </script>
+
+    <script id="scroll-tracking">
+        document.addEventListener('DOMContentLoaded', function() {
+            let scrollDepths = [25, 50, 75, 90];
+            let scrolled = [];
+            
+            function trackScrollDepth() {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                
+                scrollDepths.forEach(depth => {
+                    if (scrollPercent >= depth && !scrolled.includes(depth)) {
+                        scrolled.push(depth);
+                        
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'scroll', {
+                                scroll_depth: depth
+                            });
+                        }
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', trackScrollDepth);
+        });
+    </script>
+
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            const nav = document.querySelector('nav');
+            
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // Toggle mobile menu functionality would go here
+                    console.log('Mobile menu toggled');
+                });
+            }
+        });
+    </script>
+
+    <!-- Google Analytics 4 (Replace with your actual GA4 measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = 'FOoTELZlwmtrAw957eBF6Q';
+    window.host = 'readdy.ai';
+</script>
+</body>
+</html>
